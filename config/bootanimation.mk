@@ -4,7 +4,7 @@ PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/media/1440x2880.zip:system/media/bootanimation.zip
 endif
 
-ifeq ($(filter shamu angler,$(TARGET_PRODUCT)),)
+ifeq ($(filter  angler marlin shamu,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/media/1440x2560.zip:system/media/bootanimation.zip
 endif
@@ -24,12 +24,13 @@ PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/media/768x1024.zip:system/media/bootanimation.zip
 endif
 
+ifeq ($(filter harpia,$(TARGET_PRODUCT)),)
+PRODUCT_COPY_FILES += \
+    vendor/du/prebuilt/common/media/720×1280.zip:system/media/bootanimation.zip
+endif
+
 ifeq ($(filter dragon,$(TARGET_PRODUCT)),)
 PRODUCT_COPY_FILES += \
     vendor/du/prebuilt/common/media/1800x2560.zip:system/media/bootanimation.zip
 endif
 
-ifeq ($(filter harpia,$(TARGET_PRODUCT)),)
-PRODUCT_COPY_FILES += \
-    vendor/du/prebuilt/common/media/720×1280.zip:system/media/bootanimation.zip
-endif
