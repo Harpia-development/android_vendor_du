@@ -2,6 +2,10 @@
 scr_resolution := 1080x1920
 du_device := $(patsubst %f,%,$(subst du_,,$(TARGET_PRODUCT)))
 
+ifneq ($(filter harpia,$(du_device)),)
+scr_resolution := 720×1280
+endif
+
 ifneq ($(filter taimen,$(du_device)),)
 scr_resolution := 1440x2880
 endif
